@@ -1,0 +1,69 @@
+FindWorkingBusyBox() {
+  echo "[*] Finding a working Busybox Version (arch-aware, skip .so when possible)"
+  local cand=""
+  local fallback_so=""
+  local prefer1=""
+  local prefer2=""
+
+  # prefer exact arch names (ARCH / ARCH32) if available
+  prefer1="$ARCH"
+  prefer2="$ARCH32"
+
+  # search order: prefer non-.so busybox binaries for the right arch first
+  for cand in \
+    "$BASEDIR"/lib/*/"busybox" \
+    "$BASEDIR"/lib/*/"busybox"* \
+    "$BASEDIR"/lib/*/*busybox* \
+    "$BASEDIR"/lib/*/libbusybox* \
+    /system/bin/busybox /system/xbin/busybox /bin/busybox /usr/bin/busybox; do
+
+    [ -z "$cand" ] && continue
+    # expand globs that don't exist
+    for f in $cand; do
+      [ ! -e "$f" ] && continue
+
+      # prefer candidates that contain the ARCH string (x86_64 / x86 / arm64 ...)
+      if [[ "$f" == *"$prefer1"* || "$f" == *"$prefer2"* ]]; then
+         # skip shared objects if possible
+         if [[ "$f" == *.so ]]; then
+           # store as fallback but continue searching
+           fallback_so="$f"
+           continue
+         fi
+
+         # make executable if possible and accept
+         chmod +x "$f" 2>/dev/null || true
+         echo "[!] Using Busybox candidate (arch-preferred): $f"
+         export WorkingBusyBox="$f"
+         return 0
+      fi
+    done
+  done
+
+  # If nothing with exact arch found, try any non-.so candidate
+  for cand in "$BASEDIR"/lib/*/*busybox* /system/bin/busybox /system/xbin/busybox /bin/busybox /usr/bin/busybox; do
+    for f in $cand; do
+      [ ! -e "$f" ] && continue
+      if [[ "$f" == *.so ]]; then
+        # keep as fallback, but skip for now
+        fallback_so="$f"
+        continue
+      fi
+      chmod +x "$f" 2>/dev/null || true
+      echo "[!] Using Busybox candidate: $f"
+      export WorkingBusyBox="$f"
+      return 0
+    done
+  done
+
+  # last resort: accept a .so if nothing else found (but warn)
+  if [ -n "$fallback_so" ]; then
+    echo "[!] No standalone Busybox binary found; falling back to .so candidate: $fallback_so"
+    echo "[!] WARNING: shared libraries may not be executable or matching arch and may segfault"
+    export WorkingBusyBox="$fallback_so"
+    return 0
+  fi
+
+  echo "[!] No BusyBox candidate found in expected locations."
+  return 1
+}
