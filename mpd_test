@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://github.com/shaka-project/shaka-packager version v3.0.4-20240513-041622-06373afa-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" minBufferTime="PT6S" type="dynamic" publishTime="2025-12-04T05:38:52Z" availabilityStartTime="2025-12-03T17:57:13Z" minimumUpdatePeriod="PT6S" timeShiftBufferDepth="PT120S">
+  <BaseURL>https://geo-id-etslive-v3-vidio-com-tokenized.akamaized.net/stream/8237/file/</BaseURL>
+  <Period id="0" start="PT0S">
+    <AdaptationSet id="0" contentType="audio" startWithSAP="1" segmentAlignment="true">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+      <Representation id="0" bandwidth="130694" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="44100">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <SegmentTemplate timescale="90000" initialization="primary/aac/aac-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/aac/aac-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6996">
+          <SegmentTimeline>
+            <S t="3777301673" d="538962"/>
+            <S t="3777840841" d="538962"/>
+            <S t="3778380008" d="541051"/>
+            <S t="3778921265" d="538962"/>
+            <S t="3779460433" d="541051"/>
+            <S t="3780001690" d="538962"/>
+            <S t="3780540857" d="538962"/>
+            <S t="3781080024" d="541051"/>
+            <S t="3781621282" d="538962"/>
+            <S t="3782160449" d="541051"/>
+            <S t="3782701706" d="538962"/>
+            <S t="3783240873" d="538962"/>
+            <S t="3783780041" d="541051"/>
+            <S t="3784321298" d="538962"/>
+            <S t="3784860465" d="541051"/>
+            <S t="3785401722" d="538962"/>
+            <S t="3785940890" d="538962"/>
+            <S t="3786480057" d="541051"/>
+            <S t="3787021314" d="538962"/>
+            <S t="3787560482" d="541051"/>
+            <S t="3788101739" d="538962"/>
+            <S t="3788640906" d="538962"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="video" maxWidth="1280" maxHeight="720" frameRate="90000/3000" segmentAlignment="true" par="16:9">
+      <SupplementalProperty schemeIdUri="urn:mpeg:mpegB:cicp:TransferCharacteristics" value="1"/>
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="alternate"/>
+      <Representation id="2" bandwidth="1759038" codecs="avc1.64001f" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <SegmentTemplate timescale="90000" initialization="primary/avc-720p/avc-720p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/avc-720p/avc-720p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6997">
+          <SegmentTimeline>
+            <S t="3777846000" d="540000" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="3" bandwidth="1400712" codecs="avc1.64001f" mimeType="video/mp4" sar="1280:1281" width="854" height="480">
+        <SegmentTemplate timescale="90000" initialization="primary/avc-480p/avc-480p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/avc-480p/avc-480p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6997">
+          <SegmentTimeline>
+            <S t="3777846000" d="540000" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="4" bandwidth="738250" codecs="avc1.64001e" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <SegmentTemplate timescale="90000" initialization="primary/avc-360p/avc-360p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/avc-360p/avc-360p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6997">
+          <SegmentTimeline>
+            <S t="3777846000" d="540000" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="2" contentType="video" maxWidth="1280" maxHeight="720" frameRate="15360/512" segmentAlignment="true" par="16:9">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+      <Representation id="6" bandwidth="1734662" codecs="av01.0.05M.08.0.111.01.01.01.0" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <SegmentTemplate timescale="15360" initialization="primary/av1-720p/av1-720p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/av1-720p/av1-720p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6996">
+          <SegmentTimeline>
+            <S t="644659200" d="92160" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="7" bandwidth="1236151" codecs="av01.0.04M.08.0.111.01.01.01.0" mimeType="video/mp4" sar="1280:1281" width="854" height="480">
+        <SegmentTemplate timescale="15360" initialization="primary/av1-480p/av1-480p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/av1-480p/av1-480p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6996">
+          <SegmentTimeline>
+            <S t="644659200" d="92160" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="8" bandwidth="720744" codecs="av01.0.01M.08.0.111.01.01.01.0" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <SegmentTemplate timescale="15360" initialization="primary/av1-360p/av1-360p-1764784619-idx.mp4?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" media="primary/av1-360p/av1-360p-1764784619_$Time%09d$.m4s?hdntl=exp=1764838845~acl=/stream/8237/file/stream.mpd!/stream/8237/file/*/aac/*!/stream/8237/file/*/*-1080p/*!/stream/8237/file/*/*-720p/*!/stream/8237/file/*/*-480p/*!/stream/8237/file/*/*-360p/*~id=31928524~data=hdntl~hmac=75a7d52dabe3497abe1323d3faa289554d0814315e01899c6ba7012df3ea879b" startNumber="6996">
+          <SegmentTimeline>
+            <S t="644659200" d="92160" r="20"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+  <UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="https://time.akamai.com/?iso"/>
+</MPD>
