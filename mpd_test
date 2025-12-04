@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Generated with https://github.com/shaka-project/shaka-packager version v3.0.4-20240513-041622-06373afa-release-->
-<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" minBufferTime="PT6S" type="dynamic" publishTime="2025-12-04T05:38:52Z" availabilityStartTime="2025-12-03T17:57:13Z" minimumUpdatePeriod="PT6S" timeShiftBufferDepth="PT120S">
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" minBufferTime="PT6S" type="static" publishTime="2025-12-04T05:38:52Z" availabilityStartTime="2025-12-03T17:57:13Z" minimumUpdatePeriod="PT6S" timeShiftBufferDepth="PT120S">
   <BaseURL>https://geo-id-etslive-v3-vidio-com-tokenized.akamaized.net/stream/8237/file/</BaseURL>
   <Period id="0" start="PT0S">
     <AdaptationSet id="0" contentType="audio" startWithSAP="1" segmentAlignment="true">
